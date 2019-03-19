@@ -1,0 +1,58 @@
+/* .LoginPrompt {
+
+    background-color: #192b3b;
+    height: 100%;
+    left: 100px;
+    right: 100px;
+    position: absolute;
+
+} */
+
+.LoginBox {
+
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -200px;
+    background-color: transparent;
+
+}
+
+.LoginBox .header {
+    
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 35px;
+    width: 100%;
+    color: #00c76f;
+
+}
+
+.LoginBox .authForm {
+
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 560px;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+}
+
+.LoginBox .authForm > input {
+
+    border: none;
+    padding: 0px;
+    height: 40px;
+}
+
+.LoginBox .authForm > * {
+    width: 80%;
+    margin-bottom: 20px;
+    
+}
