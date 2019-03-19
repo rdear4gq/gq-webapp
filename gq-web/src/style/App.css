@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #86acd1;
+  font-weight: bold;
+}
+
 .App {
   background-color: #00c76f;
   position: absolute;
@@ -14,4 +22,14 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+.primary-container {
+
+  background-color: #192b3b;
+    height: 100%;
+    left: 100px;
+    right: 100px;
+    position: absolute;
+
 }

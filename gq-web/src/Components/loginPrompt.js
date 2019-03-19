@@ -7,6 +7,8 @@ class LoginPrompt extends Component {
     constructor(props) {
         super(props)
 
+        console.log(this.props.globalState);
+
         this.state = {
             email: ""
         }
@@ -37,6 +39,8 @@ class LoginPrompt extends Component {
         .then(jsonData => {
 
             console.log(jsonData);
+            this.props.globalState.updateUserInfo({token: jsonData['token']});
+
         }).catch(error => console.log(error));
         // .then(resData => {
         //     console.log(resData);
@@ -50,8 +54,9 @@ class LoginPrompt extends Component {
     }
 
     render() { 
+
         return (
-            <div className="LoginPrompt">
+            <div className="primary-container">
                 <div className="LoginBox">
                     <div className="header">Growth Quo</div>
                     <div className="authForm">
