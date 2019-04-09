@@ -1,0 +1,50 @@
+.table-small {
+    width: 100%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.table-small div {
+    width: 100%;
+}
+
+.table-small > .title {
+    
+    flex: 0 0 30px;
+    /* align-self: center; */
+    text-align: center;
+    /* background-color: lime; */
+    font-size: 1.25rem;
+    
+}
+
+.table-small > .header {
+    flex: 0 0 30px;
+    /* background-color: orange; */
+
+}
+
+.table-small > .data {
+    flex: 1 1 auto;
+    /* background-color: aqua; */
+}
+
+.table-small .row {
+    
+    display: flex;
+    flex-flow: row;
+}
+
+.table-small .row > .cell {
+    flex: 1 1 auto;
+    /* background-color: purple; */
+    align-items: center;
+    align-self: center;
+}
+
+.table-small .row > .cell:nth-child(1) {
+    flex: 0 0 50%;
+}

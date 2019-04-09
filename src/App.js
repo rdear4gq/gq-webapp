@@ -11,32 +11,48 @@ class App extends Component {
     super(props)
 
     this.state = {
-      user: {
-        email: "",
-        firstName: "",
-        lastName: "",
-        authed: false,
-        authToken: null
-      },
+      user: {},
+      authed: false,
+      authToken: null,
+      organization: {},
       updateUserInfo: (data) => {
         var decoded = JWT.decode(data.token);
         
-        const newUserData = {
-          email: decoded.user.email,
-          firstName: decoded.user.firstName,
-          lastName: decoded.user.lastName,
+        let newUserData = {
+          user: decoded.user,
           authed: true,
-          authToken: data.token
+          authToken: data.token,
+          organization: {}
         };
-        this.setState((state, props) => {
-          console.log("SEtting State...");
-          return {user: newUserData};
-        })
+        
+        // this.setState((state, props) => {
           
+        //   return newUserData;
+        // });
+
+        fetch("http://wraughn.com:4003/api/organizations/user/" + newUserData.user._id)
+        .then(res => {
+            return res.json();
+        })
+        .then(json => {
+          
+          newUserData["organization"] = json;
+          // console.log("New User Data:");
+          // console.log(newUserData);
+          this.setState((state, props) => {
+            return newUserData;
+          });
+
+            // console.log(this.state);
+        })
+        .catch(error => console.log(error));
+
+        
+
       },
-      logout: this.logout()
-      
+      logout: this.logout
     }
+
   }
 
   logout() {
@@ -52,10 +68,10 @@ class App extends Component {
   }
 
   render() {
-
+    console.log(this.state);
     return (
       <div className="App">
-          {(!this.state.user.authed && this.state.user.authToken === null) ? (
+          {(!this.state.authed && this.state.authToken === null) ? (
               <LoginPropmpt globalState={this.state}/>
           ) : (
             <MainDashboard globalState={this.state}/>

@@ -23,18 +23,32 @@
 
 }
 
-.mainDashboard .body {
+.mainDashboard .dashboardContent {
     display: flex;
     flex-flow: row;
 }
 
-.mainDashboard .body > div:nth-child(1) {
+.mainDashboard .dashboardContent > div:nth-child(1) {
     flex: 0 0 200px;
     /* background-color: orange; */
     border-right: solid 1px #0099cc6c;
 }
 
-.mainDashboard .body  >div:nth-child(2) {
+.mainDashboard .dashboardContent > div:nth-child(2) {
     flex: 1 1 auto;
     /* background-color: lime; */
+    padding: 10px;
+}
+
+.nav-dashboard {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.nav-dashboard > div {
+    flex: 0 0 50px;
+    width: 90%;
+    
 }

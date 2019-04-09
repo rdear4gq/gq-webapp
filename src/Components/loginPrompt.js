@@ -18,7 +18,7 @@ class LoginPrompt extends Component {
         this.refs.password = React.createRef();
     }
 
-    async attempAuth() {
+    async attemptAuth() {
 
         //Set the user of the state to the emailAddress
         this.state.email = this.refs.email;
@@ -54,15 +54,15 @@ class LoginPrompt extends Component {
     }
 
     render() { 
-
+        console.log("Displaying login prompt");
         return (
             <div className="primary-container">
                 <div className="LoginBox">
                     <div className="header">Growth Quo</div>
                     <div className="authForm">
-                        <input ref="email" type="text" placeholder="email" defaultValue="rdear4@gmail.com" />
+                        <input ref="email" type="text" placeholder="email" defaultValue="ron@growthquo.com" />
                         <input ref="password" type="password" placeholder="password" defaultValue="test1234" />
-                        <ButtonStd text="Login" status="inactive" clickFn={this.attempAuth.bind(this)}/>
+                        <ButtonStd text="Login" status="inactive" clickFn={this.attemptAuth.bind(this)}/>
                     </div>
                 </div>
                 
