@@ -18,7 +18,7 @@ class ActiveCampaignsTable extends Component {
         // console.log("Getting active campaigns...");
         // console.log(this.props.globalState);
         // console.log("http://wraughn.com:4003/api/campaigns/organization/" + this.props.globalState.organization._id);
-        fetch("http://wraughn.com:4003/api/campaigns/organization/" + this.props.globalState.organization._id)
+        fetch(`http://wraughn.com:4003/api/campaigns/organization?id=${this.props.globalState.organization._id}&active=1`)
         .then(res => {
             return res.json();
         })

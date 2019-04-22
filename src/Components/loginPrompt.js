@@ -7,7 +7,7 @@ class LoginPrompt extends Component {
     constructor(props) {
         super(props)
 
-        console.log(this.props.globalState);
+        // console.log(this.props.globalState);
 
         this.state = {
             email: ""
@@ -29,7 +29,7 @@ class LoginPrompt extends Component {
         var authAttempt = new Request("/api/users/login", {method: 'POST', headers: headers, body: '{"user": {"username":"' + this.refs.email.value + '", "password":"' + this.refs.password.value + '"}}'})
         fetch(authAttempt)
         .then(res => {
-            console.log(res.status);
+            
             if (res.status === 200) {
                 return res.json()
             } else {
@@ -38,23 +38,16 @@ class LoginPrompt extends Component {
         })
         .then(jsonData => {
 
-            console.log(jsonData);
+            
             this.props.globalState.updateUserInfo({token: jsonData['token']});
 
         }).catch(error => console.log(error));
-        // .then(resData => {
-        //     console.log(resData);
-        //     if (resData.err) {
-        //         console.log(resData.jsonData.err);
-        //     }
-        //     console.log(resData.jsonData["token"]);
-        // })
         
         
     }
 
     render() { 
-        console.log("Displaying login prompt");
+        
         return (
             <div className="primary-container">
                 <div className="LoginBox">

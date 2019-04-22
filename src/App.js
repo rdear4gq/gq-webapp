@@ -56,7 +56,7 @@ class App extends Component {
   }
 
   logout() {
-    console.log("Logging out...");
+    // console.log("Logging out...");
   }
 
   componentWillMount() {
@@ -68,7 +68,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className="App">
           {(!this.state.authed && this.state.authToken === null) ? (

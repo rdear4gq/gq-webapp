@@ -1,0 +1,76 @@
+.campaigns {
+
+    display: flex;
+    flex-flow: column;
+    position: relative;
+
+}
+
+.campaigns .topButtonContainer {
+
+    flex: 0 0 120px;
+    background-color: rgba(46, 100, 136, 0.678);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row;
+
+    justify-content: center;
+
+}
+
+.campaigns > div:nth-child(1) .btn {
+    align-self: center;
+}
+
+.campaigns > div:nth-child(2) {
+
+    flex: 1 1 auto;
+    /* background-color: lime; */
+}
+
+.campaigns > .campaigns-table {
+
+    display: flex;
+    flex-flow: column;
+
+}
+
+.campaigns-table .row {
+
+    /* background-color: orange; */
+    flex: 0 0 50px;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+}
+
+.campaigns-table > .table-data {
+    flex: 1 1 auto;
+    background-color: purple;
+    display: flex;
+    flex-flow: column;
+}
+
+.campaigns-table > .header {
+
+    
+}
+
+.campaigns-table .cell {
+    flex: 1 1 auto;
+    /* background-color: fuchsia; */
+    align-self: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
