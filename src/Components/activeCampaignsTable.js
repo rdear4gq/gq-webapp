@@ -18,13 +18,21 @@ class ActiveCampaignsTable extends Component {
         // console.log("Getting active campaigns...");
         // console.log(this.props.globalState);
         // console.log("http://wraughn.com:4003/api/campaigns/organization/" + this.props.globalState.organization._id);
+        // console.log(`http://wraughn.com:4003/api/campaigns/organization?id=${this.props.globalState.organization._id}&active=1`);
         fetch(`http://wraughn.com:4003/api/campaigns/organization?id=${this.props.globalState.organization._id}&active=1`)
         .then(res => {
             return res.json();
         })
         .then(json => {
             // console.log(json);
-            this.setState({campaigns: json})
+            let campaigns = {...json};
+
+            // this.setState({ campaigns });
+            this.setState((state, props) => {
+
+                return campaigns;
+
+            });
 
         })
         .catch(error => console.log(error));
@@ -35,10 +43,12 @@ class ActiveCampaignsTable extends Component {
     }
 
     componentWillUpdate() {
-        console.log("Component will update");
+        // console.log("Component will update");
     }
 
     render() { 
+        // console.log("Active Campaigns Table");
+        // console.log(this.state.campaigns);
         return (
             <div className="table-small">
                 <div className="title">{this.props.title}</div>

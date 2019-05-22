@@ -70,13 +70,32 @@ class SingleCampaignDashboard extends Component {
 
     }
 
-    updateCampaign = () => {
+    updateCampaignRequest = () => {
 
+        console.log("Updating Campaign");
         console.log(this.state);
+
+        let url = `http://wraughn.com:4003/api/campaigns/${this.state.campaignData._id}`;
+        console.log(url);
+        let reqParameters = {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${this.props.globalState.authToken}`
+            },
+            body: JSON.stringify({campaign: this.state.campaignData})
+        }
+
+        console.log(this.state.campaignData);
+
+        fetch(url, reqParameters)
+        .then(res => res.json())
+        .then(json => console.log(json))
+        .catch(err => console.log(err));
 
         //TO DO:
             //Update the server with the new name
-            
+
     }
 
     editCampaignName = () => {

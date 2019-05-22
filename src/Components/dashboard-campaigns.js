@@ -29,6 +29,8 @@ class DashboardCampaigns extends Component {
         .then( res => res.json() )
         .then( json => {
 
+            let campaigns = {...json};
+            // this.setState({ campaigns });
             this.setState((state, props) => {
                 return ({campaigns: json});
             });

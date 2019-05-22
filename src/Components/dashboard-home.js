@@ -35,6 +35,8 @@ class DashboardHome extends Component {
     }
 
     render() { 
+        console.log("Dashboard-Home");
+        console.log(this.props.globalState);
         return (
             <div style={{"display": (this.props.active) ? "" : "none"}} className="dashboard contentPanel">
                 <div className="companyInfo">

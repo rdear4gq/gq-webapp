@@ -1,0 +1,376 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1500px) and (max-width: 1900px) {
+    .single-input.fleet-datepicker {
+        width: 75%;
+    }
+    .budget-status-inner {
+        width: 83%;
+    }
+    .budget-button {
+        width: 17%;
+        padding-left: 15px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+    .dt-wrapper {
+        width: 90%;
+        padding-left: 10px;
+    }
+    .single-input.fleet-datepicker {
+        width: 65%;
+    }
+    .rest-money ul li {
+        margin-left: 15px;
+    }
+    .budget-status h4 {
+        font-size: 17px;
+        margin: 0;
+    }
+    .budget-button {
+        width: 14%;
+        padding-left: 10px;
+    }
+    .budget-btn {
+        width: 70px;
+        height: 45px;
+        font-size: 14px;
+    }
+    .budget-status-inner {
+        width: 86%;
+    }
+    .lf-title {
+        width: 85%;
+    }
+    .edit-icon {
+        width: 15%;
+    }
+
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .menu-open {
+	display: block;
+}
+    
+    .header-area {
+	
+	margin-left: 0;
+}
+    
+
+.header-area.active-br {
+  margin-left: 220px;
+}
+.all.active-br {
+  margin-left: 220px;
+}
+.left-all.active-br {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+} 
+    
+    
+    
+    
+    .left-all {
+        -webkit-transform: translateX(-220px);
+        transform: translateX(-220px);
+    }
+    .right-all {
+        margin-left: 0;
+    }
+    .main-menu ul li.mobile-bar {
+        display: block;
+    }
+    .lf-content-wrap {
+        margin-bottom: 30px;
+    }
+    .budget-status-outer {
+        margin-bottom: 20px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .budget-button {
+        width: 100%;
+        padding-left: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .budget-status-inner {
+        width: 100%;
+    }
+
+}
+
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+    .menu-open {
+	display: block;
+}
+        .header-area {
+	
+	margin-left: 0;
+}
+    
+
+.header-area.active-br {
+  margin-left: 220px;
+}
+.all.active-br {
+  margin-left: 220px;
+}
+.left-all.active-br {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+} 
+    
+    
+    .left-all {
+        -webkit-transform: translateX(-220px);
+        transform: translateX(-220px);
+    }
+    .right-all {
+        margin-left: 0;
+    }
+    .main-menu ul li.mobile-bar {
+        display: block;
+    }
+    .lf-content-wrap {
+        margin-bottom: 30px;
+    }
+    .budget-status-outer {
+        margin-bottom: 20px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .budget-button {
+        width: 100%;
+        padding-left: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .budget-status-inner {
+        width: 100%;
+    }
+}
+
+ 
+/* small mobile :320px. */
+@media (min-width: 320px) and (max-width: 767.98px) {
+    .menu-open {
+	display: block;
+}
+        .header-area {
+	
+	margin-left: 0;
+}
+    .main-menu {
+	margin-top: 15px;
+}
+
+.header-area.active-br {
+  margin-left: 220px;
+}
+.all.active-br {
+  margin-left: 220px;
+}
+.left-all.active-br {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+} 
+    
+    
+    .left-all {
+        -webkit-transform: translateX(-220px);
+        transform: translateX(-220px);
+    }
+    .right-all {
+        margin-left: 0;
+    }
+    .main-menu ul li.mobile-bar {
+        display: block;
+    }
+    .lf-content-wrap {
+        margin-bottom: 30px;
+    }
+    .budget-status-outer {
+        margin-bottom: 20px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .budget-button {
+        width: 100%;
+        padding-left: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+    .budget-status-inner {
+        width: 100%;
+    }
+    .nav-item .nav-link {
+        display: block;
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+    .nav-item .nav-link.active {
+        display: block;
+        padding: 8px 30px;
+        font-size: 16px;
+    }
+    .user-details {
+        width: 850px;
+    }
+    .user-details-wrp {
+        overflow: scroll;
+    }
+    .recent-table {
+        width: 600px;
+    }
+    .camp-button {
+        text-align: center;
+    }
+    .header-area {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+ 
+}
+ 
+/* Large Mobile :480px. */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .single-input.fleet-datepicker {
+        width: 80%;
+        margin-left: 5px;
+    }
+    .budget-status {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        height: 70px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .budget-status h4 {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .rest-money ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .rest-money {
+        width: 100%;
+    }
+    .logo a img {
+        max-width: 180px;
+    }
+
+ 
+}
+@media (min-width: 0px) and (max-width: 575px) {
+    .main-menu ul li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+    .nav-item .nav-link {
+        padding: 8px 28px;
+    }
+    .nav-item .nav-link.active {
+        padding: 8px 28px;
+    }
+    .campaigns-content-wrap {
+        background: var(--themeColorTwo);
+        padding: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .lf-title {
+        width: 80%;
+        height: 100%;
+        font-size: 16px;
+    }
+    .edit-icon {
+        width: 20%;
+    }
+    .cal-icon {
+        width: 15%;
+    }
+    .single-input.fleet-datepicker {
+        width: 95%;
+    }
+    .single-input.fleet-datepicker {
+        width: 95%;
+    }
+    .rest-money ul li {
+        height: 18px;
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .budget-status h4 {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .budget-status {
+        height: 125px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding-top: 12px;
+    }
+    .rest-money ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .rest-money ul li:first-child {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    .logo {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 30px;
+    }
+    .logo a img {
+        max-width: 185px;
+    }
+    .main-menu ul {
+        height: 30px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .header-area {
+        height: 75px;
+        padding-top: 10px;
+    }
+}

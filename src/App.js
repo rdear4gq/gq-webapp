@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import { BrowserRouter } from 'react-router-dom';
+
 import './style/App.css';
 import LoginPropmpt from './Components/loginPrompt.js';
 import MainDashboard from './Components/mainDashboard.js';
@@ -39,10 +41,15 @@ class App extends Component {
           newUserData["organization"] = json;
           // console.log("New User Data:");
           // console.log(newUserData);
-          this.setState((state, props) => {
-            return newUserData;
-          });
+          // this.setState((state, props) => {
+          //   return newUserData;
+          // });
+          let user = newUserData.user;
+          let authed: true;
+          let authToken = newUserData.authToken;
+          let organization = newUserData.organization;
 
+          this.setState({ user, authed, authToken, organization });
             // console.log(this.state);
         })
         .catch(error => console.log(error));
