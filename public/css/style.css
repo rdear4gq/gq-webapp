@@ -169,6 +169,11 @@ p {
 .menu-open li {
   list-style: none;
 }
+
+.menu-open li > * {
+	pointer-events: none;
+}
+
 .menu-open li span {
   display: ;
   cursor: pointer;
@@ -246,6 +251,10 @@ p {
 }
 .lf-menu li {
 	margin-bottom: 28px;
+}
+
+.lf-menu li > * {
+	pointer-events: none;
 }
 .lf-menu li a {
 	font-size: 14px;

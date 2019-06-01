@@ -153,9 +153,10 @@ p {
 .menu-open {
 	display: none;
 }
-.all {
+.content-area {
 	-webkit-transition: .3s;
 	transition: .3s;
+	height: 400px;
 }
 .menu-open li {
 	display: inline-block;
@@ -201,6 +202,7 @@ p {
 	display: inline-block;
 	margin-left: 40px;
 }
+
 .main-menu ul li a {
 	font-size: 16px;
 	color: #B8CAD9;

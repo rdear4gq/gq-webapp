@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 
 import './style/App.css';
 import LoginPropmpt from './Components/loginPrompt.js';
-import MainDashboard from './Components/mainDashboard.js';
+// import MainDashboard from './Components/mainDashboard.js';
+import Dashboard from './Components/dashboard.jsx';
 
 const JWT = require('jsonwebtoken');
 
@@ -14,8 +15,8 @@ class App extends Component {
 
     this.state = {
       user: {},
-      authed: false,
-      authToken: null,
+      authed: true,
+      authToken: "12456",
       organization: {},
       updateUserInfo: (data) => {
         var decoded = JWT.decode(data.token);
@@ -77,13 +78,14 @@ class App extends Component {
   render() {
     // console.log(this.state);
     return (
-      <div className="App">
+      // <div className="App">
+      <React.Fragment>
           {(!this.state.authed && this.state.authToken === null) ? (
               <LoginPropmpt globalState={this.state}/>
           ) : (
-            <MainDashboard globalState={this.state}/>
+            <Dashboard globalState={this.state}/>
           )}
-      </div>
+      </React.Fragment>
     );
   }
 }
