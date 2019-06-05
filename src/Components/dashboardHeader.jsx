@@ -7,6 +7,29 @@ import React, { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 
 class DashboardHeader extends Component {
+
+    constructor(props) {
+
+        super(props);
+
+        this.state = {
+            mobileMenuBarVisible: false
+        }
+
+    }
+
+    mobileMenuButtonClicked = () => {
+        
+        console.log("Menu button clicked");
+
+        let mobileMenuBarVisible = !this.state.mobileMenuBarVisible;
+
+        this.setState({mobileMenuBarVisible});
+
+        console.log(`DashboardHeader ${this.state.mobileMenuBarVisible}`);
+
+        this.props.mobileMenuBarButtonCallback(mobileMenuBarVisible);
+    }
     
     render() { 
         return (
@@ -14,7 +37,7 @@ class DashboardHeader extends Component {
                 <Row>
                     <Col sm={6}>
                         <div className="menu-open">
-                            <li className="mobile-bar"><span><i className="fal fa-align-left"></i></span></li>
+                            <li className={this.state.mobileMenuBarVisible ? "mobile-bar active-br" : "mobile-bar"} onClick={this.mobileMenuButtonClicked}><span><i className="fal fa-align-left"></i></span></li>
                         </div>
                     </Col>
                     <Col sm={6}>
@@ -26,7 +49,8 @@ class DashboardHeader extends Component {
                                         <li><a href="#">Logout</a></li>
                                         <li><a href="#"><span className="notification">
                                             <i className="fal fa-bell"></i>
-                                            <span className="notifi-counter">3</span>
+                                            {(this.props.notificationCount > 0) ? (<span className="notifi-counter">{this.props.notificationCount}</span>) : ""}
+                                            
                                         </span></a></li>
                                     </ul>
                                 </nav>

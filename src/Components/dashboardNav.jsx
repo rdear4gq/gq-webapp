@@ -14,9 +14,9 @@ class DashboardNav extends Component {
                 {text: "Home", active: true, img: "img/home.svg"},
                 {text: "Campaigns", active: false, img: "img/campaign.svg"},
                 {text: "Reports", active: false, img: "img/report.svg"},
-                {text: "Influences", active: false, img: "img/home.svg"},
+                {text: "Influencers", active: false, img: "img/home.svg"},
                 {text: "Messages", active: false, img: "img/message.svg"},
-                {text: "Settings", active: false, img: "img/settings.svg"}
+                {text: "Settings", active: false, img: "img/setting.svg"}
             ]
         }
     }
@@ -40,7 +40,7 @@ class DashboardNav extends Component {
 
         return (
             <React.Fragment>
-                <div className="left-all">
+                <div className={this.props.mobileMenuBarVisible ? "left-all active-br" : "left-all"}>
                     <div className="bar-logo">
                         <a href="#">
                             <img src="img/logo.png" />
@@ -49,12 +49,16 @@ class DashboardNav extends Component {
                     <div className="lf-sidebar">
                         <ul className="lf-menu">
                             {this.state.buttons.map((obj, i) => {
-                                return (<li btn-id={i} key={i} onClick={this.navClicked} className={(obj.active == true) ? "active" : ""}><a href="#"><span><img src={obj.img} alt="" /></span>{obj.text}</a></li>)
+
+                                if (obj.text == "Messages" && this.props.messageCount > 0) {
+                                    return (<li btn-id={i} key={i} onClick={this.navClicked} className={(obj.active == true) ? "active" : ""}><a href="#"><span><img src={obj.img} alt="" /></span>{obj.text}<span className="msg-c">{this.props.messageCount}</span></a></li>)
+                                } else {
+                                    return (<li btn-id={i} key={i} onClick={this.navClicked} className={(obj.active == true) ? "active" : ""}><a href="#"><span><img src={obj.img} alt="" /></span>{obj.text}</a></li>)
+                                }
+                                
                             })}
                         </ul>
                     </div>
-                </div>
-                <div className="right-all">
                 </div>
             </React.Fragment>
         );

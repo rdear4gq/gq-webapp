@@ -15,8 +15,8 @@ class App extends Component {
 
     this.state = {
       user: {},
-      authed: true,
-      authToken: "12456",
+      authed: false,
+      authToken: null,
       organization: {},
       updateUserInfo: (data) => {
         var decoded = JWT.decode(data.token);

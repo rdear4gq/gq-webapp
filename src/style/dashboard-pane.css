@@ -1,0 +1,35 @@
+.content-pane {
+
+    
+    /* background-color: red; */
+    margin-top: 12px;
+    /* padding: 15px; */
+    
+}
+
+.content-pane:first-child {
+    margin-top: 15px;
+}
+
+.content-pane .bread-crumbs-area {
+
+    margin-bottom: 12px;
+
+}
+
+.content-pane .content-area {
+
+    background-color: var(--themeColorTwo);
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.content-pane .section {
+    background-color: var(--themeColor);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
