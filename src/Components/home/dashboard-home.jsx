@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 
+
+
 // import ActiveCampaignsTable from "../Components/activeCampaignsTable.js";
 // import RecentActivityTable from "../Components/recentActivityTable.js";
 
-import "../style/dashboard-pane.css";
-import "../style/dashboard-home.css";
+import "../../style/dashboard-pane.css";
+import "../../style/dashboard-home.css";
 
 import { Container, Col, Row } from 'react-bootstrap';
+
+// import QuickLookTableRow from "../home/quick-look-table-row.jsx";
+import QuickLookTableActiveCampaigns from "../home/quick-look-table-activeCampaigns.jsx";
+import QuickLookTableRecentActivity from "../home/quick-look-table-recentActivity.jsx";
 
 class DashboardHome extends Component {
     constructor(props) {
@@ -42,29 +48,52 @@ class DashboardHome extends Component {
                     <Container fluid={true}>
                         <div className="section org-info">
                             <Row>
-                                <Col xl={4}>
+                                <Col xl="auto">
                                     
                                     <div className="org-img-wrapper">
                                     </div>
-                                    <div className="org-name">
-                                    </div>
                                     
+                                    
+                                </Col>
+                                <Col>
+                                    <div className="org-name-wrapper">
+                                        
+                                    </div>
+                                </Col>
+                                <Col xl={6} className="org-budget-wrapper-outer">
+                                    <div className="org-budget-wrapper-inner">
+                                        <div className="label-wrapper-outer">
+                                            <span className="label-wrapper-inner">Budget</span>
+                                        </div>
+                                        <div className="value-wrapper-outer">
+                                            <span className="value-wrapper-inner">$10,000</span>
+                                        </div>
+
+                                    </div>
                                 </Col>
                             </Row>
                         </div>                    
-                        <div className="section quick-look-tables">
-                            <Row>
-                                
-                                <Col xl={6}>
+                        {/* <div className="section quick-look-tables"> */}
+                        <Row>
+                            <Col xl={6}>
+                                <div className="section">
+                                    <div className="section-title">Recent Posts</div>
                                     
-                                </Col>
-                                <Col xl={6}>
-                                </Col>
-                            </Row>
-                        </div>
-                        <div className="section influencer-suggestions-wrapper">
-                            <Row>
-                            </Row>
+                                    <QuickLookTableRecentActivity />
+                                </div>
+                            </Col>
+                            <Col xl={6}>
+                                <div className="section">
+                                    <div className="section-title">Active Campaigns</div>
+                                    <QuickLookTableActiveCampaigns />
+                                    
+                                </div>                                
+                            </Col>
+                        </Row>
+                        {/* </div> */}
+                        <div className="section">
+                            <div className="influencer-suggestions-wrapper">
+                            </div>
                         </div>
                     </Container>
                 </div>                

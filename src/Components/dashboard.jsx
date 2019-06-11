@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import DashboardHeader from "../Components/dashboardHeader.jsx";
 import DashboardNav from "../Components/dashboardNav.jsx";
-import DashboardHome from "../Components/dashboard-home.jsx";
+import DashboardHome from "../Components/home/dashboard-home.jsx";
 import DashboardCampaigns from "../Components/dashboard-campaigns.jsx";
 
 class Dashboard extends Component {
@@ -119,7 +119,9 @@ class Dashboard extends Component {
                 <div className={this.state.mobileMenuBarVisible ? "content-area active-br" : "content-area"}>
                     <Container fluid={true} >
                         <DashboardNav navButtonClicked={this.navButtonClicked} messageCount={this.state.messages.length} mobileMenuBarVisible={this.state.mobileMenuBarVisible}/>
-                        {this.state.panes.get(this.state.activePaneIndex).component}
+                        <div className="right-all">
+                            {this.state.panes.get(this.state.activePaneIndex).component}
+                        </div>
                     </Container>
                 </div>
             </React.Fragment>
