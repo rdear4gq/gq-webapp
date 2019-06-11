@@ -6,13 +6,13 @@ import React, { Component } from 'react';
 // import RecentActivityTable from "../Components/recentActivityTable.js";
 
 import "../../style/dashboard-pane.css";
-import "../../style/dashboard-home.css";
+import "../home/style/dashboard-home.css";
 
 import { Container, Col, Row } from 'react-bootstrap';
 
-// import QuickLookTableRow from "../home/quick-look-table-row.jsx";
 import QuickLookTableActiveCampaigns from "../home/quick-look-table-activeCampaigns.jsx";
 import QuickLookTableRecentActivity from "../home/quick-look-table-recentActivity.jsx";
+import InfluencerCard from "../home/influencer-card.jsx";
 
 class DashboardHome extends Component {
     constructor(props) {
@@ -44,59 +44,70 @@ class DashboardHome extends Component {
         return (
             
             <div className="content-pane db-home-wrapper">
-                <div className="content-area">
-                    <Container fluid={true}>
-                        <div className="section org-info">
-                            <Row>
-                                <Col xl="auto">
-                                    
-                                    <div className="org-img-wrapper">
-                                    </div>
-                                    
-                                    
-                                </Col>
-                                <Col>
-                                    <div className="org-name-wrapper">
-                                        
-                                    </div>
-                                </Col>
-                                <Col xl={6} className="org-budget-wrapper-outer">
-                                    <div className="org-budget-wrapper-inner">
-                                        <div className="label-wrapper-outer">
-                                            <span className="label-wrapper-inner">Budget</span>
-                                        </div>
-                                        <div className="value-wrapper-outer">
-                                            <span className="value-wrapper-inner">$10,000</span>
-                                        </div>
-
-                                    </div>
-                                </Col>
-                            </Row>
-                        </div>                    
-                        {/* <div className="section quick-look-tables"> */}
+                
+                <Container fluid={true} className="content-area">
+                    <div className="section org-info">
                         <Row>
-                            <Col xl={6}>
-                                <div className="section">
-                                    <div className="section-title">Recent Posts</div>
-                                    
-                                    <QuickLookTableRecentActivity />
+                            <Col xl="auto" className="org-img-wrapper-outer">
+                                
+                                <div className="org-img-wrapper-inner">
+                                </div>
+                                
+                            </Col>
+                            <Col className="org-name-wrapper-outer">
+                                <div className="org-name-wrapper-inner">
+                                    Ron's Cool Company
                                 </div>
                             </Col>
-                            <Col xl={6}>
-                                <div className="section">
-                                    <div className="section-title">Active Campaigns</div>
-                                    <QuickLookTableActiveCampaigns />
-                                    
-                                </div>                                
+                            <Col xl={6} className="org-budget-wrapper-outer">
+                                <div className="org-budget-wrapper-inner">
+                                    <div className="label-wrapper-outer">
+                                        <span className="label-wrapper-inner">Budget</span>
+                                    </div>
+                                    <div className="value-wrapper-outer">
+                                        <span className="value-wrapper-inner">$10,000</span>
+                                    </div>
+
+                                </div>
                             </Col>
                         </Row>
-                        {/* </div> */}
-                        <div className="section">
-                            <div className="influencer-suggestions-wrapper">
+                    </div>                    
+                    {/* <div className="section quick-look-tables"> */}
+                    <Row>
+                        <Col xl={6}>
+                            <div className="section">
+                                <div className="section-title-wrapper">
+                                    <div className="title">Recent Activity</div>
+                                </div>
+                                
+                                <QuickLookTableRecentActivity />
                             </div>
+                        </Col>
+                        <Col xl={6}>
+                            <div className="section">
+                                <div className="section-title-wrapper">
+                                    <div className="title">Active Campaigns</div>
+                                </div>
+                                <QuickLookTableActiveCampaigns />
+                                
+                            </div>                                
+                        </Col>
+                    </Row>
+                    {/* </div> */}
+                    <div className="section">
+                        <div className="section-title-wrapper">
+                            <div className="title">Recommended Influencers</div> 
                         </div>
-                    </Container>
-                </div>                
+                        <div className="influencer-suggestions-wrapper-outer">
+                            <div className="influencer-suggestions-wrapper-inner">
+                                <InfluencerCard flipped={false}/>
+                                <InfluencerCard flipped={true} />
+                                <InfluencerCard flipped={false} />
+                                <InfluencerCard flipped={false} />
+                            </div>                                
+                        </div>
+                    </div>
+                </Container>
             </div>                
             
         )

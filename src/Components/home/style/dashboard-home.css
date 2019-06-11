@@ -14,17 +14,35 @@
     align-items: center;
 }
 
-.db-home-wrapper .org-info .org-img-wrapper {
+.db-home-wrapper .org-info .org-img-wrapper-outer {
+
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.db-home-wrapper .org-info .org-img-wrapper-inner {
+    align-self: center;
     background-color: lime;
     height:100px;
     width: 100px;
     border-radius: 50px;
 }
 
-.db-home-wrapper .org-info .org-name-wrapper {
-    /* background-color: red; */
+.db-home-wrapper .org-info .org-name-wrapper-outer {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    
+}
+
+.db-home-wrapper .org-info .org-name-wrapper-inner {
+
     color: white;
     font-size: 1.5rem;
+
 }
 
 .db-home-wrapper .org-info .org-budget-wrapper-outer {
@@ -137,6 +155,24 @@
 
 }
 
-.db-home-wrapper .influencer-suggestions-wrapper {
+.db-home-wrapper .influencer-suggestions-wrapper-outer {
+
+    padding: 10px;
+    background-color: var(--themeColorTwo);
+    margin-top: 10px;
+    margin-bottom: 10px;
+
     
+}
+
+.db-home-wrapper .influencer-suggestions-wrapper-inner {
+    
+    display: flex;
+    flex-flow: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+    /* padding-left: 10px;
+    padding-right: 100px;  */
+    /* background-color: lime; */
+
 }

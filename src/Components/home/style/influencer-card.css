@@ -1,0 +1,186 @@
+.influencer-card-wrapper-outer {
+
+	flex: 0 0 250px;
+	height: 280px;
+	background-color: var(--themeColor);
+	border-radius: 5px;
+	margin-right: 20px;
+
+}
+
+.influencer-card-wrapper-outer .influencer-card-front-wrapper-inner {
+	display: flex;
+	flex-flow: column;
+	/* justify-content: space-evenly; */
+	/* justify-content: center; */
+	/* background-color: purple; */
+	padding: 15px;
+	color: rgb(193, 240, 255);
+	font-size: 0.8rem;
+}
+
+.influencer-card-wrapper-outer .influencer-card-front-wrapper-inner * {
+	pointer-events: none;
+}
+
+
+.influencer-card-front-wrapper-inner .img {
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	background-color: black;
+	border: solid 2px var(--themeColorTwo);
+	align-self: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	
+}
+
+.influencer-card-front-wrapper-inner > div {
+	margin-bottom: 5px;
+}
+
+.influencer-card-front-wrapper-inner .name {
+	
+	font-weight: bold;
+	
+}
+
+.influencer-card-front-wrapper-inner .reach {
+	display: flex;
+	flex-flow: row;
+}
+
+.influencer-card-front-wrapper-inner .label {
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner {
+	/* background-color: red; */
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	justify-content: center;
+	padding: 5px;
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper {
+	flex: 1 1 auto;
+	
+	display: flex;
+	flex-flow: column;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 0.6rem;
+	color: white;
+	/* justify-content: space-evenly; */
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper .name {
+	border-bottom: solid 1px var(--themeColorTwo);
+	color: white;
+	font-size: 0.75rem;
+	align-self: center;
+	width: 100%;
+	text-align: center;
+	/* background-color: blueviolet; */
+	/* height: 30px; */
+	/* padding-top: 5px; */
+	padding-bottom: 5px;
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper .stats {
+
+	display: flex;
+	flex-flow: row;
+	/* background-color: yellow; */
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper .stats > div {
+
+	margin-right: 10px;
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper .stats > .img {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: lime;
+	border-color: solid 1px var(--themeColorTwo);
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper .stats > .stat {
+
+	/* background-color: blue; */
+	
+	
+	align-self: center;
+	/* margin-right: 5px; */
+	
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper .stats > .stat > .label {
+	font-weight: bold;
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper .stats > .stat > div {
+
+	/* height: 20px; */
+	text-align: center;
+	/* background-color: pink; */
+	
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper > .description {
+	border-bottom: solid 1px var(--themeColorTwo);
+	padding-bottom: 5px;
+	margin-bottom: 10px
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper > .content-tags-container {
+
+	font-size: 0.3rem;
+	margin-bottom: 10px;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper > .content-tags-container > .content-tag {
+
+	/* margin: 0 auto; */
+	display: flex;
+	flex-flow: column;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	width: 50px;
+	/* background-color: red; */
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper > .content-tags-container > .content-tag > .icon {
+	align-self: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: var(--themeColorTwo);
+
+}
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .info-wrapper > .content-tags-container > .content-tag > .label {
+	align-self: center;
+}
+
+.influencer-card-wrapper-outer .influencer-card-rear-wrapper-inner > .button-wrapper {
+
+	flex: 0 0 auto;
+	/* background-color: orange; */
+	align-self: center;
+	padding: 5px;
+
+}

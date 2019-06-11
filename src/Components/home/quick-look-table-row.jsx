@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "../../style/dashboard-home.css";
+// import "../../style/dashboard-home.css";
 
 class QuickLookTableRow extends Component {
 	
