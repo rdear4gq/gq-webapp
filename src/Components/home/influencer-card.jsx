@@ -29,9 +29,25 @@ class InfluencerCard extends Component {
 
 	}
 
+	mouseIn = (e) => {
+
+		e.stopPropagation();
+		let flipped = true;
+
+		this.setState({ flipped });
+	}
+
+	mouseOut = (e) => {
+
+		e.stopPropagation();
+		let flipped = false;
+
+		this.setState({ flipped });
+	}
+
 	render() { 
 		return (
-			<div className="influencer-card-wrapper-outer" onClick={this.cardSelected}>
+			<div className="influencer-card-wrapper-outer" onMouseEnter={this.mouseIn} onMouseLeave={this.mouseOut}>
 				{(this.state.flipped === false) ? (
 					<div className="influencer-card-front-wrapper-inner">
 					

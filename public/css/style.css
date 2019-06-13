@@ -348,7 +348,7 @@ p {
 .b-crumb-area .breadcrumb-item {
 	line-height: 1;
 }
-.b-crumb-area .breadcrumb-item a {
+.b-crumb-area .breadcrumb-item span {
 	color: #89A7BE;
 	font-size: 12px;
 }

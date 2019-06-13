@@ -6,8 +6,8 @@ import { Container, Col, Row } from 'react-bootstrap';
 // import ButtonStd from "../Components/btn-std.js";
 // import SingleCampaignDashboard from "../Components/singleCampaignDashboard.js";
 
-import "../style/dashboard-pane.css";
-import "../style/dashboard-campaigns.css";
+import "../../style/dashboard-pane.css";
+import "../campaigns/style/dashboard-campaigns.css";
 
 
 
@@ -22,7 +22,8 @@ class DashboardCampaigns extends Component {
         this.state = {
             campaigns: [],
             displayingSingleCampaign: false,
-            selectedCampaign: ""
+            selectedCampaign: "",
+            breadcrumbs: ["Campaigns"]
         }
     }
 
@@ -71,23 +72,30 @@ class DashboardCampaigns extends Component {
     render() { 
         // console.log(this.state);
         return (
-            <div className="contentPane db-campaigns-wrapper">
-                <div className="content-area">
-                    <Row>
-                        <Col xl={12}>
-                            <div className="section newCampaignButtonWrapper">
-                            </div>
+            <div className="content-pane db-campaigns-wrapper">    
+                <Container fluid={true} className="content-area">
+                    <Row className="b-crumb-area">
+                        <Col xl="12">
+                            <nav aria-label="breadcrumb">
+                                <ol className="breadcrumb">
+                                    {this.state.breadcrumbs.map((obj, i) => {
+
+                                        return (i > 0) ? <li className="breadcrumb-item" key={i}>::before<span>{obj}</span></li> : <li className="breadcrumb-item" key={i}><span>{obj}</span></li>;
+
+                                    })}
+                                </ol>
+                            </nav>
                         </Col>
                     </Row>
-                    <Row>
-                    </Row>
-                    <Row>
-                        <Col xl={12}>
-                            <div className="section campaigns-table-wrapper">
-                            </div>
-                        </Col>
-                    </Row>
-                </div>                                
+                    <div className="section new-campaign-button-wrapper">
+                        <Row >
+                            <Col xl="12">
+                                <div className="new-campaign-button-wrapper">
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
+                </Container>                      
             </div>
         )
         // return (

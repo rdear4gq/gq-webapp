@@ -4,7 +4,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 import DashboardHeader from "../Components/dashboardHeader.jsx";
 import DashboardNav from "../Components/dashboardNav.jsx";
 import DashboardHome from "../Components/home/dashboard-home.jsx";
-import DashboardCampaigns from "../Components/dashboard-campaigns.jsx";
+import DashboardCampaigns from "../Components/campaigns/dashboard-campaigns.jsx";
 
 class Dashboard extends Component {
 
@@ -19,42 +19,42 @@ class Dashboard extends Component {
                     0,
                     {
                         section: "Home",
-                        component: <DashboardHome />
+                        component: DashboardHome
                     }
                 ],
                 [
                     1,
                     {
                         section: "Campaigns",
-                        component: <DashboardCampaigns />
+                        component: DashboardCampaigns
                     }
                 ],
                 [
                     2,
                     {
                         section: "Reports",
-                        component: <DashboardHome />
+                        component: DashboardHome
                     }
                 ],
                 [
                     3,
                     {
                         section: "Influencers",
-                        component: <DashboardHome />
+                        component: DashboardHome
                     }
                 ],
                 [
                     4,
                     {
                         section: "Messages",
-                        component: <DashboardHome />
+                        component: DashboardHome
                     }
                 ],
                 [
                     5,
                     {
                         section: "Settings",
-                        component: <DashboardHome />
+                        component: DashboardHome
                     }
                 ]
 
@@ -105,7 +105,14 @@ class Dashboard extends Component {
 
         console.log(`Dashboard.jsx${this.state.mobileMenuBarVisible}`);
 
-    } 
+    }
+
+    getPane = () => {
+
+        const PaneComponent = this.state.panes.get(this.state.activePaneIndex).component;
+
+        return <PaneComponent globalState={this.props.globalState} />
+    }
 
     render() { 
         
@@ -120,7 +127,7 @@ class Dashboard extends Component {
                     <Container fluid={true} >
                         <DashboardNav navButtonClicked={this.navButtonClicked} messageCount={this.state.messages.length} mobileMenuBarVisible={this.state.mobileMenuBarVisible}/>
                         <div className="right-all">
-                            {this.state.panes.get(this.state.activePaneIndex).component}
+                            {this.getPane()}
                         </div>
                     </Container>
                 </div>

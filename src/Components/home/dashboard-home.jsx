@@ -20,17 +20,26 @@ class DashboardHome extends Component {
 
         this.state = {
 
-            org_info: {},
-            acct_info: {},
-            sug_influencers: [],
-            recent_act: []
+            activeCampaigns: []
 
         }
     }
 
     componentWillMount() {
 
-        //TO DO:
+        fetch(`http://wraughn.com:4003/api/campaigns/organization?id=${this.props.globalState.organization._id}&active=1`)
+        .then(res => {
+            return res.json();
+        })
+        .then(json => {
+            console.log(json);
+            let activeCampaigns = json;
+
+            this.setState({ activeCampaigns });
+            
+
+        })
+        .catch(error => console.log(error));
             
 
     }
@@ -40,6 +49,8 @@ class DashboardHome extends Component {
     }
 
     render() {
+
+        console.log(this.props.globalState);
 
         return (
             
@@ -88,7 +99,7 @@ class DashboardHome extends Component {
                                 <div className="section-title-wrapper">
                                     <div className="title">Active Campaigns</div>
                                 </div>
-                                <QuickLookTableActiveCampaigns />
+                                <QuickLookTableActiveCampaigns activeCampaigns={this.state.activeCampaigns} />
                                 
                             </div>                                
                         </Col>
